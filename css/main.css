@@ -54,6 +54,17 @@ html, body {
   height: 100%;
 }
 
+
+#references{
+  padding-top: 20px;
+  color:white;
+  text-align: center;
+}
+
+#references:hover{
+  color:#34AB7F;
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

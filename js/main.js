@@ -14,7 +14,7 @@
 
 	// Init Main Content
 	metronal.mainContent = {
-		list: ["#home","#microbial", "#photovoltaics", "#methanedetection",'#energymapping',"#about", "#solarfuel","#solarmaterials","#hydrogen","#thermodynamics"],
+		list: ["#home","#microbial", "#photovoltaics", "#methanedetection",'#energymapping',"#about", "#solarfuel","#solarmaterials","#hydrogen","#thermodynamics","#references"],
 		on: "",
 		off: ""
 	};
