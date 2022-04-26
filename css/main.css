@@ -1202,7 +1202,7 @@ html.mfp-helper {
 .one-pic{
     width: 100%;
     height: 100%;
-    background-image: url('https://i.ibb.co/bJts9sK/mitzi.png');
+    background-image: url('../img/mitzi.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1213,7 +1213,7 @@ html.mfp-helper {
 .two-pic{
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/3yYZq4t/bradbury.png');
+  background-image: url('../img/bradbury.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1223,7 +1223,7 @@ html.mfp-helper {
 .three-pic{
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/8j6c3bJ/hotz.png');
+  background-image: url('../img/hotz.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1232,7 +1232,7 @@ html.mfp-helper {
 .four-pic{
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/1s5Vttc/glass1.png');
+  background-image: url('../img/glass1.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1241,7 +1241,7 @@ html.mfp-helper {
 .six-pic{
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/fHmb3dY/blum.png');
+  background-image: url('../img/blum.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1250,7 +1250,7 @@ html.mfp-helper {
 .seven-pic{
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/sWjJfBY/delaire.png');
+  background-image: url('../img/delaire.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1259,7 +1259,7 @@ html.mfp-helper {
 .eight-pic{
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/C66p44W/lynch.png');
+  background-image: url('../img/lynch.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1268,7 +1268,7 @@ html.mfp-helper {
 .nine-pic{
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/Zx3bysh/glass2.png');
+  background-image: url('../img/glass2.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
