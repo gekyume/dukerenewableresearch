@@ -14,7 +14,7 @@
 
 	// Init Main Content
 	metronal.mainContent = {
-		list: ["#home", "#photovoltaics", '#energymapping',"#about", "#hydrogen"],
+		list: ["#home","#microbial", "#photovoltaics", "#methanedetection",'#energymapping',"#about", "#solarfuel","#solarmaterials","#hydrogen","#thermodynamics"],
 		on: "",
 		off: ""
 	};
@@ -378,7 +378,7 @@
 		$('#picture').removeClass("nine-pic")  ;
 		$('#picture').addClass("nine-pic")  ;
 	});
-
+/*
 		// Close Menu Link On Click
 		$("#four").on("click", function(e) {
 			metronal.dynamicPage(e, $(this)[0].hash);
@@ -395,7 +395,7 @@
 			$('#picture').addClass("lg-profile-picture")  ;
 			$('#picture').fadeIn(0);
 		});
-
+*/
 
 	// Close Menu Link On Click
 	$(".close-menu-link").on("click", function(e) {
