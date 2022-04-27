@@ -273,16 +273,7 @@ function changeImageTo(number,speed){
 	// Menu Link On Click
 	$(".menu-link").on("click", function(e) {
 		metronal.dynamicPage(e, $(this)[0].hash);
-		$('#picture').removeClass("zero-pic")  ;
-		$('#picture').removeClass("one-pic")  ;
-		$('#picture').removeClass("two-pic")  ;
-		$('#picture').removeClass("three-pic")  ;
-		$('#picture').removeClass("four-pic")  ;
-		$('#picture').removeClass("six-pic")  ;
-		$('#picture').removeClass("seven-pic")  ;
-		$('#picture').removeClass("eight-pic")  ;
-		$('#picture').removeClass("nine-pic")  ;
-		$('#picture').addClass("zero-pic")  ;
+
 	});
 	let zero = document.getElementById('zero');
 	let one = document.getElementById('one');
