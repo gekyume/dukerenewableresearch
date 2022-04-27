@@ -5,12 +5,44 @@
 /* Version       : 1.4                                            */
 /* ============================================================== */
 
+function preloadImage(url)
+{
+    var img=new Image(url);
+    img.src=url;
+}
+function changeImageTo(number,speed){
+	$("#picture").animate({
+	opacity: 0.10,
+}, speed, function () {
+	$('#picture').removeClass("zero-pic")  ;
+	$('#picture').removeClass("one-pic")  ;
+	$('#picture').removeClass("two-pic")  ;
+	$('#picture').removeClass("three-pic")  ;
+	$('#picture').removeClass("four-pic")  ;
+	$('#picture').removeClass("six-pic")  ;
+	$('#picture').removeClass("seven-pic")  ;
+	$('#picture').removeClass("eight-pic")  ;
+	$('#picture').removeClass("nine-pic")  ;
+	$('#picture').addClass(number+"-pic")  ;
+}).animate({ opacity: 1 }, speed);
+}
+
+
 (function($) {
 
 	"use strict";
 
 	// Init Metronal
 	var metronal = {};
+	preloadImage('../img/mitzi.png');
+	preloadImage('../img/bradbury.png');
+	preloadImage('../img/glass1.png');
+	preloadImage('../img/glass2.png');
+	preloadImage('../img/blum.png');
+	preloadImage('../img/hotz.png');
+	preloadImage('../img/lynch.png');
+	preloadImage('../img/delaire.png');
+
 
 	// Init Main Content
 	metronal.mainContent = {
@@ -22,7 +54,10 @@
 	// Pre Load
 	metronal.preLoad = function(duration) {
 		$('#pre-load').fadeOut(parseInt(duration, 10));
+		$('#picture').addClass("zero-pic");
 	};
+
+
 
 	// Replace Viewport Height
 	// Solves the issue about the viewport height on mobile devices as when the page loads
@@ -238,7 +273,7 @@
 	// Menu Link On Click
 	$(".menu-link").on("click", function(e) {
 		metronal.dynamicPage(e, $(this)[0].hash);
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').removeClass("zero-pic")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -247,16 +282,131 @@
 		$('#picture').removeClass("seven-pic")  ;
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
-		$('#picture').addClass("lg-profile-picture")  ;
+		$('#picture').addClass("zero-pic")  ;
+	});
+	let zero = document.getElementById('zero');
+	let one = document.getElementById('one');
+	let two = document.getElementById('two');
+	let three = document.getElementById('three');
+	let four = document.getElementById('four');
+	let five = document.getElementById('five');
+	let six = document.getElementById('six');
+	let seven = document.getElementById('seven');
+	let eight = document.getElementById('eight');
+	let nine = document.getElementById('nine');
+	let picture = document.getElementById('picture');
+	
+	one.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("one-pic")){
+			changeImageTo("one",100);
+		}
+		else{
+		}
+	  });
+
+	two.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("two-pic")){
+			changeImageTo("two",100);
+		}
+		else{
+		}
+	  });
+
+	three.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("three-pic")){
+			changeImageTo("three",100);
+		}
+		else{
+		}
+	  });
+
+	four.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("four-pic")){
+			changeImageTo("four",100);
+		}
+		else{
+		}
+	  });	  
+
+	five.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("zero-pic")){
+			changeImageTo("zero",100);
+		}
+		else{
+		}
+	  });
+
+	six.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("six-pic")){
+			changeImageTo("six",100);
+		}
+		else{
+		}
+	  });
+
+	seven.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("seven-pic")){
+			changeImageTo("seven",100);
+		}
+		else{
+		}
+	  });	
+
+	eight.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("eight-pic")){
+			changeImageTo("eight",100);
+		}
+		else{
+		}
+	  });
+
+	nine.addEventListener('mouseenter', e => {
+		if(!picture.classList.contains("nine-pic")){
+			changeImageTo("nine",100);
+		}
+		else{
+		}
+	  });	
+	  
+/*
+
+	$("#one").onmouseover(function(elt) { 
+		if(("#.picture").src != '../img/mitzi.png'){
+			changeImageTo("one",50);
+		}
 	});
 
+	$("#one").mouseleave(function(){
+		changeImageTo("one",0);
+	});
+
+	$("#two").onmouseover(function(elt) { 
+		if(("#.picture").src != '../img/bradbury.png'){
+		changeImageTo("two",50);
+		}
+	});
+
+	$("#two").mouseleave(function(){
+		changeImageTo("two",0);
+	});
+
+	*/
 
 
-
-
+/*
+	preloadImage('../img/mitzi.png');
+	preloadImage('../img/bradbury.png');
+	preloadImage('../img/glass1.png');
+	preloadImage('../img/glass2.png');
+	preloadImage('../img/blum.png');
+	preloadImage('../img/hotz.png');
+	preloadImage('../img/lynch.png');
+	preloadImage('../img/delaire.png');
 
 	$("#one").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').fadeOut(50);
+		$('#picture').addClass("one-pic")  ;
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -265,11 +415,14 @@
 		$('#picture').removeClass("seven-pic")  ;
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
-		$('#picture').addClass("one-pic")  ;
+		
+		$('#picture').fadeIn(50);
 	});
 
 	$("#two").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').fadeOut(50);
+		$('#picture').addClass("two-pic")  ;
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -278,12 +431,14 @@
 		$('#picture').removeClass("seven-pic")  ;
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
-		$('#picture').addClass("two-pic")  ;
+		
+		$('#picture').fadeIn(50);
 	});
 
 
 	$("#three").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').fadeOut(50);
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -293,11 +448,13 @@
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
 		$('#picture').addClass("three-pic")  ;
+		$('#picture').fadeIn(50);
 	});
 
 
 	$("#four").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').fadeOut(50);
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -307,13 +464,15 @@
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
 		$('#picture').addClass("four-pic")  ;
+		$('#picture').fadeIn(50);
 	});
 	
 
 
 
 	$("#five").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').fadeOut(50);
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -322,12 +481,14 @@
 		$('#picture').removeClass("seven-pic")  ;
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
-		$('#picture').addClass("lg-profile-picture")  ;
+		$('#picture').addClass("zero")  ;
+		$('#picture').fadeIn(50);
 	});
 	
 
 	$("#six").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').fadeOut(50);
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -337,10 +498,11 @@
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
 		$('#picture').addClass("six-pic")  ;
+		$('#picture').fadeIn(50);
 	});
 
 	$("#seven").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -350,10 +512,11 @@
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
 		$('#picture').addClass("seven-pic")  ;
+		$('#picture').fadeIn(100);
 	});
 
 	$("#eight").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -367,7 +530,7 @@
 
 
 	$("#nine").hover(function(elt) { 
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').removeClass("zero")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -383,7 +546,7 @@
 		$("#four").on("click", function(e) {
 			metronal.dynamicPage(e, $(this)[0].hash);
 			$('#picture').fadeOut(0);
-			$('#picture').removeClass("lg-profile-picture")  ;
+			$('#picture').removeClass("zero")  ;
 			$('#picture').removeClass("one-pic")  ;
 			$('#picture').removeClass("two-pic")  ;
 			$('#picture').removeClass("three-pic")  ;
@@ -392,16 +555,18 @@
 			$('#picture').removeClass("seven-pic")  ;
 			$('#picture').removeClass("eight-pic")  ;
 			$('#picture').removeClass("nine-pic")  ;
-			$('#picture').addClass("lg-profile-picture")  ;
+			$('#picture').addClass("zero")  ;
 			$('#picture').fadeIn(0);
 		});
+
 */
+
+
 
 	// Close Menu Link On Click
 	$(".close-menu-link").on("click", function(e) {
 		metronal.dynamicPage(e, $(this)[0].hash);
-		$('#picture').fadeOut(0);
-		$('#picture').removeClass("lg-profile-picture")  ;
+		$('#picture').removeClass("zero-pic")  ;
 		$('#picture').removeClass("one-pic")  ;
 		$('#picture').removeClass("two-pic")  ;
 		$('#picture').removeClass("three-pic")  ;
@@ -410,8 +575,7 @@
 		$('#picture').removeClass("seven-pic")  ;
 		$('#picture').removeClass("eight-pic")  ;
 		$('#picture').removeClass("nine-pic")  ;
-		$('#picture').addClass("lg-profile-picture")  ;
-		$('#picture').fadeIn(0);
+		$('#picture').addClass("zero-pic")  ;
 	});
 
 	// Contact Button On Click

@@ -1200,7 +1200,7 @@ html.mfp-helper {
 /* [ 3.2.1. Large Profile Picture ]                                */
 /*=================================================================*/
 
-.lg-profile-picture {
+.zero-pic {
   width: 100%;
   height: 100%;
   background-image: url('../img/intro.png');
